@@ -6,8 +6,9 @@ import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
+  console.log("Using production mode")
 }
 
+// Bootstrapping application
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
-

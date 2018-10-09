@@ -19,7 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.json",
             "assets": [
-              "src/favicon.ico"
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -40,7 +40,7 @@
               "extractCss": true,
               "namedChunks": false,
               "aot": true,
-              "extractLicenses": false,
+              "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
             }
@@ -49,7 +49,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-starter:build"
+            "browserTarget": "angular-starter:build",
+            "port": 4200,
+            "host": "0.0.0.0"
           },
           "configurations": {
             "production": {
